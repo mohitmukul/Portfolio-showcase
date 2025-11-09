@@ -1,11 +1,15 @@
 import { useRecoilState, useRecoilValue } from "recoil"
 import { Themeatom, ThemeSelector } from "../States/Atoms/ThemeAtom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 
 export const Header=()=>{
     const [Theme,setTheme]=useRecoilState(Themeatom)
 
     const {accent,subtext}=useRecoilValue(ThemeSelector)
+    const navigate=useNavigate()
+    const location=useLocation()
+    const isHomePage=location.pathname==='/'
 
     const ToggleTheme=()=>{
 
@@ -15,7 +19,9 @@ export const Header=()=>{
 
 return <header className="max-w-6xl mx-auto mb-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-center md:text-left">
+            <div   onClick={() => navigate('/')}
+            className="cursor-pointer text-center sm:text-left"
+            >
               <h1 className={`text-4xl md:text-5xl font-bold ${accent}`}>
                 My React Portfolio
               </h1>
@@ -26,6 +32,15 @@ return <header className="max-w-6xl mx-auto mb-12">
                 Showcasing React • Recoil • Modern State Management
               </p>
             </div>
+            {!isHomePage && (
+              <button
+                onClick={() => navigate(-1)}
+                className="px-3 sm:px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
+              >
+                <span>←</span>
+                <span className="hidden sm:inline">Back</span>
+              </button>
+            )}
             
         
             <button 

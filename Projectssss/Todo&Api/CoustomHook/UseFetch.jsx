@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+
 export const useFetch=(url)=>{
 
     const [Data,setData]=useState({})

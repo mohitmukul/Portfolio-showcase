@@ -16,6 +16,8 @@ export const Section = () => {
   const { accent, subtext, card, Cardborder } = useRecoilValue(ThemeSelector);
   const navigate = useNavigate();
 
+  
+
   return (
     <>
       {(activesec === "all" || activesec === "ReactHooks") && (
@@ -215,9 +217,7 @@ export const Section = () => {
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 mb-6`}>
             <div
               className={`border ${Cardborder} rounded-lg shadow-lg p-5 hover:shadow-xl transition-shadow`}
-              onClick={() => {
-                navigate("/recoil");
-              }}
+             
             >
               <h3 className={`font-semibold text-lg mb-2`}>
                 Counter App (Live!)
@@ -225,7 +225,7 @@ export const Section = () => {
               <p className={`text-sm ${subtext} mb-4`}>
                 Full-featured counter with atoms, selectors, and deployment
               </p>
-              <div className="m-4 overflow-hidden border border-grya-300">
+              <div className="m-4 flex flex-col items-center overflow-hidden border border-grya-300">
                 <img
                   src={recoilImg}
                   alt="recoil app preview"
@@ -235,7 +235,7 @@ export const Section = () => {
                   href="https://recoil-counter-app.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  className={`inline-block px-6 py-3 bg-blue-600  rounded-lg hover:bg-blue-700 transition m-1`}
                 >
                   🚀 View Live Project
                 </a>

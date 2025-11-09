@@ -10,6 +10,7 @@ export function PrevCounter() {
   }
 
   return (
+        <div className=" flex flex-cols justify-center items-center">
     <div className="bg-gray-700 text-white rounded-xl shadow-xl p-6 w-80 space-y-6">
       <h2 className="text-3xl font-bold text-center">Counter</h2>
 
@@ -33,6 +34,7 @@ export function PrevCounter() {
           Click
         </button>
       </div>
+    </div>
     </div>
   );
 }
