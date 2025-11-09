@@ -204,7 +204,7 @@ export const Section = () => {
         </section>
       )}
 
-      {(activesec === "all" || activesec === "recoil") && (
+      {(activesec === "all" || activesec === "Recoil") && (
         <section className={`${card} rounded-lg shadow-xl p-8 transition-all`}>
           <h2
             className={`${accent} text-3xl flex items-center font-bold mb-6 gap-3`}
