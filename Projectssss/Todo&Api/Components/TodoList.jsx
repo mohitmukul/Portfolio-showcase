@@ -142,8 +142,8 @@ export const Todo = () => {
                   />
                 </span>
                 <p
-                  className={`grow px-3 py-2 text-lg sm:text-xl ${
-                    todo.completed ? "line-through text-gray-500" : ""
+                  className={`grow px-3 py-2 text-lg sm:text-xl text-gray-900 ${
+                    todo.completed ? "line-through text-gray-500" : "text-gray-900"
                   }`}
                 >
                   {todo.title}

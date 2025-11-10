@@ -26,7 +26,7 @@ return <header className="max-w-6xl mx-auto mb-12">
                 My React Portfolio
               </h1>
               <p className={`mt-2 ${subtext}`}>
-                Mohit | Self-taught Developer | BA Graduate
+               <strong className={`${accent}`}> Mohit</strong> | Self-taught Developer | BA Graduate
               </p>
               <p className={`text-sm ${subtext} mt-1`}>
                 Showcasing React • Recoil • Modern State Management
